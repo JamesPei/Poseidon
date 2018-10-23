@@ -63,13 +63,10 @@ Matrix Matrix::operator*(const Matrix &b) {
     return tmp;
 }
 
-vector<double> Matrix::gaussian_elimination(){       //高斯消元
+vector<double> Matrix::gaussian_elimination(){
     /*
-     * 复杂度O(n**3)
-     * a:矩阵
-     * n:未知数个数
-     * l,ans 存储解，l[]表示是否为自由元
-     * return:解空间的维数
+     * 高斯消元，用于求解多元一次方程，复杂度O(n**3)
+     * return:方程解集
      */
     int r = 0;
     const int n = row;
