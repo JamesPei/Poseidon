@@ -38,7 +38,7 @@ public:
     Matrix operator * (const Matrix &b);
 
     std::vector<double> gaussian_elimination();
-    void inverse(std::vector<double> A[], std::vector<double> C[], int N);
+    std::vector<std::vector<double>> inverse();
 };
 
 #endif //CLIONPROJECTS_MATRIX_H
