@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/peilei/CLionProjects/Poseidon/main.cpp
+iostream
+-
+vector
+-
+matrix.h
+/Users/peilei/CLionProjects/Poseidon/matrix.h
+
+/Users/peilei/CLionProjects/Poseidon/matrix.cpp
+string
+-
+iostream
+-
+algorithm
+-
+cmath
+-
+vector
+-
+matrix.h
+/Users/peilei/CLionProjects/Poseidon/matrix.h
+
+/Users/peilei/CLionProjects/Poseidon/matrix.h
+vector
+-
+iostream
+-
+array
+-
+
