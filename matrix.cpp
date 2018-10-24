@@ -81,14 +81,14 @@ vector<double> Matrix::gaussian_elimination(){
 
     for (int i = 0; i < n; ++i){
         for (int j = r; j < n; ++j)
-            if (fabs(tmp.matrix[j][i]) > EPS){
+            if (fabs(tmp.matrix[j][i]) > 0){
                 for (int k = i; k < n; ++k)
                     std::swap(tmp.matrix[j][k], tmp.matrix[r][k]);
                 break;
             }
-        if (fabs(tmp.matrix[r][i]) < EPS)    continue;
+        if (fabs(tmp.matrix[r][i]) < 0)    continue;
         for (int j=0; j<n; ++j)
-            if (j != r && fabs(tmp.matrix[j][i])>EPS){
+            if (j != r && fabs(tmp.matrix[j][i]) > 0){
                 double scale = tmp.matrix[j][i] / tmp.matrix[r][i];
                 for (int k=i; k<=n; ++k)
                     tmp.matrix[j][k] -= scale * tmp.matrix[r][k];
@@ -104,10 +104,54 @@ vector<double> Matrix::gaussian_elimination(){
     return ans;
 }
 
-inline void Matrix::inverse(vector<double> A[], vector<double> C[], int N){
+vector<double> operator * (vector<double> a, double b){
+    size_t N = a.size();
+    vector<double> res(N, 0);
+    for(int i=0; i<N; ++i)
+        res[i] = a[i]*b;
+    return res;
+}
+
+vector<double> operator - (vector<double> a, vector<double> b){
+    size_t N = a.size();
+    vector<double> res(N, 0);
+    for (int i=0; i<N; ++i)
+        res[i] = a[i] - b[i];
+    return res;
+}
+
+vector<vector<double>> Matrix::inverse(){
     /*
-     * A:原矩阵
-     * C:逆矩阵
-     * N:矩阵的阶数
+     * return:转置后的矩阵
      */
+    if(col!=row){
+        cout<<"col must equal to row"<<endl;
+    } else {
+        int N = col;    // 矩阵的阶
+        vector<double> b(col, 0);
+        vector<vector<double>> reverse(row, b);
+        vector<vector<double>> original;
+        original = matrix;
+
+        for (int i = 0; i < row; ++i) {
+            reverse[i][i] = 1;
+        }
+
+        for (int i = 0; i < N; ++i) {
+            for (int j = i; j < N; ++j)
+                if (fabs(original[j][i]) > 0) {     // 此处目的为保证对角线不为0，若为0就交换
+                    swap(original[i], original[j]);
+                    swap(reverse[i], reverse[j]);
+                    break;
+                }
+            reverse[i] = reverse[i] * (1 / original[i][i]);
+            original[i] = original[i] * (1 / original[i][i]);
+            for (int j = 0; j < N; ++j)
+                if (j != i && fabs(original[j][i]) > 0) {
+                    reverse[j] = reverse[j] - reverse[i] * original[j][i];
+                    original[j] = original[j] - original[i] * original[j][i];
+                }
+        }
+        return reverse;
+    }
 }

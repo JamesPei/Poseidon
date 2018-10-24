@@ -83,6 +83,12 @@
 		<Unit filename="/Users/peilei/CLionProjects/Poseidon/main.cpp">
 			<Option target="Poseidon"/>
 		</Unit>
+		<Unit filename="/Users/peilei/CLionProjects/Poseidon/matrix.cpp">
+			<Option target="Poseidon"/>
+		</Unit>
+		<Unit filename="/Users/peilei/CLionProjects/Poseidon/matrix.h">
+			<Option target="Poseidon"/>
+		</Unit>
 		<Unit filename="/Users/peilei/CLionProjects/Poseidon/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

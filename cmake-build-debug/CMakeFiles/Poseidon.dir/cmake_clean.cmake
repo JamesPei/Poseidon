@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Poseidon.dir/matrix.cpp.o"
   "CMakeFiles/Poseidon.dir/main.cpp.o"
   "Poseidon.pdb"
   "Poseidon"
