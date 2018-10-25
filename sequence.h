@@ -9,6 +9,7 @@
 
 int clhr(int a[], int b[], int n, int t){
     /*
+     *
      * 常系数线性齐次齐次递推，复杂度O((n**3)*log(t))
      * a:常系数数组
      * b:初值数组

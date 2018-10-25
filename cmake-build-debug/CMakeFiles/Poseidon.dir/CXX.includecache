@@ -6,33 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/peilei/CLionProjects/Poseidon/main.cpp
-iostream
+/Users/peilei/CLionProjects/Poseidon/primenumber.cpp
+cstring
 -
 vector
 -
-matrix.h
-/Users/peilei/CLionProjects/Poseidon/matrix.h
+primenumber.h
+/Users/peilei/CLionProjects/Poseidon/primenumber.h
 
-/Users/peilei/CLionProjects/Poseidon/matrix.cpp
-string
--
-iostream
--
-algorithm
--
-cmath
--
+/Users/peilei/CLionProjects/Poseidon/primenumber.h
 vector
--
-matrix.h
-/Users/peilei/CLionProjects/Poseidon/matrix.h
-
-/Users/peilei/CLionProjects/Poseidon/matrix.h
-vector
--
-iostream
--
-array
 -
 

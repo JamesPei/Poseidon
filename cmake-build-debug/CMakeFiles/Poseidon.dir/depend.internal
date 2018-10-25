@@ -4,6 +4,10 @@
 CMakeFiles/Poseidon.dir/main.cpp.o
  /Users/peilei/CLionProjects/Poseidon/main.cpp
  /Users/peilei/CLionProjects/Poseidon/matrix.h
+ /Users/peilei/CLionProjects/Poseidon/primenumber.h
 CMakeFiles/Poseidon.dir/matrix.cpp.o
  /Users/peilei/CLionProjects/Poseidon/matrix.cpp
  /Users/peilei/CLionProjects/Poseidon/matrix.h
+CMakeFiles/Poseidon.dir/primenumber.cpp.o
+ /Users/peilei/CLionProjects/Poseidon/primenumber.cpp
+ /Users/peilei/CLionProjects/Poseidon/primenumber.h
