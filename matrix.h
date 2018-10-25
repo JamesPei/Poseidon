@@ -4,7 +4,6 @@
 
 #ifndef CLIONPROJECTS_MATRIX_H
 #define CLIONPROJECTS_MATRIX_H
-#define EPS 1e-8
 
 #include <vector>
 #include <iostream>
