@@ -89,6 +89,15 @@
 		<Unit filename="/Users/peilei/CLionProjects/Poseidon/matrix.h">
 			<Option target="Poseidon"/>
 		</Unit>
+		<Unit filename="/Users/peilei/CLionProjects/Poseidon/primenumber.cpp">
+			<Option target="Poseidon"/>
+		</Unit>
+		<Unit filename="/Users/peilei/CLionProjects/Poseidon/primenumber.h">
+			<Option target="Poseidon"/>
+		</Unit>
+		<Unit filename="/Users/peilei/CLionProjects/Poseidon/sequence.h">
+			<Option target="Poseidon"/>
+		</Unit>
 		<Unit filename="/Users/peilei/CLionProjects/Poseidon/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

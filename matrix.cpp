@@ -122,6 +122,7 @@ vector<double> operator - (vector<double> a, vector<double> b){
 
 vector<vector<double>> Matrix::inverse(){
     /*
+     * 矩阵转置，复杂度O(n**3)
      * return:转置后的矩阵
      */
     if(col!=row){

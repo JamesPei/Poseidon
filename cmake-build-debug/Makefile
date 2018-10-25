@@ -177,6 +177,33 @@ matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/Poseidon.dir/build.make CMakeFiles/Poseidon.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
+primenumber.o: primenumber.cpp.o
+
+.PHONY : primenumber.o
+
+# target to build an object file
+primenumber.cpp.o:
+	$(MAKE) -f CMakeFiles/Poseidon.dir/build.make CMakeFiles/Poseidon.dir/primenumber.cpp.o
+.PHONY : primenumber.cpp.o
+
+primenumber.i: primenumber.cpp.i
+
+.PHONY : primenumber.i
+
+# target to preprocess a source file
+primenumber.cpp.i:
+	$(MAKE) -f CMakeFiles/Poseidon.dir/build.make CMakeFiles/Poseidon.dir/primenumber.cpp.i
+.PHONY : primenumber.cpp.i
+
+primenumber.s: primenumber.cpp.s
+
+.PHONY : primenumber.s
+
+# target to generate assembly for a file
+primenumber.cpp.s:
+	$(MAKE) -f CMakeFiles/Poseidon.dir/build.make CMakeFiles/Poseidon.dir/primenumber.cpp.s
+.PHONY : primenumber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"
+	@echo "... primenumber.o"
+	@echo "... primenumber.i"
+	@echo "... primenumber.s"
 .PHONY : help
 
 
