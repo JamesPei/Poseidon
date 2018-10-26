@@ -27,8 +27,11 @@ int main() {
 //    matrix5.clear();
 
 
-    int n = 20;
-    vector<int> r=getPrime(n);
+    int n = 50;
+//    vector<int> r=getPrime(n);
+    vector<int> r = prime_factor_Decomposition(n);
     for(int i:r)
         cout<<i<<endl;
+
+
 }

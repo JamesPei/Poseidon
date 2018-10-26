@@ -10,6 +10,6 @@
 
 std::vector<int> getPrime(int n);
 bool isPrime(int n);
-void prime_factor_Decomposition();
+std::vector<int> prime_factor_Decomposition(int n);
 
 #endif //POSEIDON_PRIMENUMBER_H

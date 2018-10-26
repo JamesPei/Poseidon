@@ -46,13 +46,14 @@ bool isPrime(int n){
 
 }
 
-void prime_factor_Decomposition(int n){
+vector<int> prime_factor_Decomposition(int n){
     /*
      * Time complexity:O(sqrt(n))
      * 
      */
     int temp, i, now, tot;
-    vector<int> a, b;
+    vector<int> a(n/2+1, 0), b(n/2+1, 0);
+    vector<int> res;
     temp=(int)((double)sqrt(n)+1);
     tot = 0;
     now = n;
@@ -69,4 +70,10 @@ void prime_factor_Decomposition(int n){
         a[++tot] = now;
         b[tot]=1;
     }
+    for(size_t i=0; i<a.size(); ++i){
+        if(a[i]!=0)
+            for(int j=0; j<b[i]; j++)
+                res.push_back(a[i]);
+    }
+    return res;
 }
