@@ -2,6 +2,7 @@
 #include <vector>
 #include "matrix.h"
 #include "primenumber.h"
+#include "graph.h"
 
 using std::vector; using std::cout; using std::endl;
 
@@ -27,11 +28,19 @@ int main() {
 //    matrix5.clear();
 
 
-    int n = 50;
+//    int n = 50;
 //    vector<int> r=getPrime(n);
-    vector<int> r = prime_factor_Decomposition(n);
-    for(int i:r)
-        cout<<i<<endl;
+//    vector<int> r=prime_factor_Decomposition(n);
+//    for(int i:r)
+//        cout<<i<<endl;
 
-
+    Graph graph(0,0);
+    graph.add(1,2);
+    graph.add(3,4);
+    graph.add(2,3);
+    graph.add(1,3);
+    graph.add(1,5);
+    graph.add(4,5);
+    graph.add(4,1);
+    graph.print();
 }
