@@ -1,10 +1,11 @@
 #include <iostream>
 #include <vector>
+#include <map>
 #include "matrix.h"
 #include "primenumber.h"
 #include "graph.h"
 
-using std::vector; using std::cout; using std::endl;
+using std::vector; using std::cout; using std::endl; using std::map;
 
 int main() {
 //    int l3[3][3] = {{2, 1, 1}, {6, 2, 1},{-2, 2, 1}};
@@ -34,13 +35,30 @@ int main() {
 //    for(int i:r)
 //        cout<<i<<endl;
 
-    Graph graph(0,0);
+//    Graph graph(0,0);
+//    graph.add(1,5);
+//    graph.add(2,1);
+//    graph.add(2,3);
+//    graph.add(2,5);
+//    graph.add(3,5);
+//    graph.add(5,6);
+//    graph.add(6,3);
+//    graph.add(6,4);
+
+    map<int, vector<int>> map;
+    Graph graph(map);
     graph.add(1,2);
-    graph.add(3,4);
-    graph.add(2,3);
     graph.add(1,3);
-    graph.add(1,5);
-    graph.add(4,5);
-    graph.add(4,1);
+    graph.add(2,4);
+    graph.add(2,5);
+    graph.add(3,6);
+    graph.add(4,7);
+    graph.add(5,7);
+    graph.add(6,5);
+    graph.add(6,8);
+    graph.add(7,9);
+    graph.add(8,9);
+    graph.add(9,NULL);
     graph.print();
+
 }
