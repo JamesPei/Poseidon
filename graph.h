@@ -68,8 +68,6 @@ public:
             for(i=0; i<info.size(); i++)
                 if(info[i]==to.size() - 1){
                     info[i] = next.back();
-                    //Returns a reference to the last element in the vector. Unlike member vector::end, which returns an
-                    //iterator just past this element, this function returns a direct reference
                     break;
                 }
             to.pop_back();
@@ -124,7 +122,7 @@ private:
     }
 };
 
-bool topsort();
+int* toposort(Graph g);
 void dijkstra();
 void floyd_warshall();
 
