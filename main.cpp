@@ -55,10 +55,13 @@ int main() {
     graph.add(4,7);
     graph.add(5,7);
     graph.add(6,5);
-    graph.add(6,8);
+    graph.add(6,8); 
     graph.add(7,9);
     graph.add(8,9);
-    graph.add(9,NULL);
-    graph.print();
+    graph.add(9,-1);
+//    graph.print();
 
+    int* r = toposort(graph);
+    for(int i=1; i<10; i++)
+        cout<<*(r+i)<<endl;
 }

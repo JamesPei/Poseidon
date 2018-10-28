@@ -132,7 +132,7 @@ private:
     }
 };
 
-bool topsort();
+int* toposort(Graph g);
 void dijkstra();
 void floyd_warshall();
 
