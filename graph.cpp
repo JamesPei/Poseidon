@@ -5,15 +5,16 @@
 #include <queue>
 #include <iostream>
 #include <map>
+#include <memory>
 #include "graph.h"
 
-using std::vector; using std::queue; using std::map;
+using std::vector; using std::queue; using std::map; using std::shared_ptr; using std::make_shared;
 
 
-int* toposort(Graph g){
+shared_ptr<vector<int>> toposort(Graph g){
     /*
      * 拓扑排序
-     * 复杂度O(|V|+|
+     * 复杂度O(|V|+|E|)
      */
     map<int, vector<int>> graph = g.graph;
     map<int, vector<int>>::iterator it;
@@ -38,9 +39,9 @@ int* toposort(Graph g){
         }
     }
 
-    int* p = new int[n];
+    vector<int> v(n, 0);
     for(int i=0; i< n; i++){
-        p[i] = L[i];
+        v[i] = L[i];
     }
-    return p;
+    return make_shared<vector<int>>(v);
 }

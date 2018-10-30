@@ -122,7 +122,7 @@ private:
     }
 };
 
-int* toposort(Graph g);
+std::shared_ptr<std::vector<int>> toposort(Graph g);
 void dijkstra();
 void floyd_warshall();
 
