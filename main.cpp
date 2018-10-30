@@ -61,7 +61,7 @@ int main() {
     graph.add(9,-1);
 //    graph.print();
 
-    int* r = toposort(graph);
+    auto r = toposort(graph);
     for(int i=1; i<10; i++)
-        cout<<*(r+i)<<endl;
+        cout<<(*r)[i]<<endl;
 }
