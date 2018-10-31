@@ -4,6 +4,7 @@
 
 #ifndef POSEIDON_GRAPH_H
 #define POSEIDON_GRAPH_H
+#define INF 1e100
 
 #include <vector>
 #include <iostream>
