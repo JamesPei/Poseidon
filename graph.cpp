@@ -11,7 +11,7 @@
 using std::vector; using std::queue; using std::map; using std::shared_ptr; using std::make_shared;
 
 
-shared_ptr<vector<int>> toposort(Graph g){
+vector<int> toposort(Graph g){
     /*
      * 拓扑排序
      * 复杂度O(|V|+|E|)
@@ -19,7 +19,8 @@ shared_ptr<vector<int>> toposort(Graph g){
     map<int, vector<int>> graph = g.graph;
     map<int, vector<int>>::iterator it;
     int n = graph.size()+1;
-    int du[n], L[n-1];
+    int du[n];
+    vector<int> L;
     memset(du, 0 , sizeof(du));
     for(it=graph.begin(); it!=graph.end(); ++it)
         for(int j:it->second)
@@ -39,9 +40,5 @@ shared_ptr<vector<int>> toposort(Graph g){
         }
     }
 
-    vector<int> v(n, 0);
-    for(int i=0; i< n; i++){
-        v[i] = L[i];
-    }
-    return make_shared<vector<int>>(v);
+    return L;
 }
