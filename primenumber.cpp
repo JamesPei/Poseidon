@@ -49,7 +49,7 @@ bool isPrime(int n){
 vector<int> prime_factor_Decomposition(int n){
     /*
      * Time complexity:O(sqrt(n))
-     * 
+     *
      */
     int temp, i, now, tot;
     vector<int> a(n/2+1, 0), b(n/2+1, 0);

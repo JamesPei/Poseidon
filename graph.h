@@ -4,6 +4,7 @@
 
 #ifndef POSEIDON_GRAPH_H
 #define POSEIDON_GRAPH_H
+#define INF 1e100
 
 #include <vector>
 #include <iostream>
@@ -132,7 +133,7 @@ private:
     }
 };
 
-std::shared_ptr<std::vector<int>> toposort(Graph g);
+std::vector<int> toposort(Graph g);
 void dijkstra();
 void floyd_warshall();
 

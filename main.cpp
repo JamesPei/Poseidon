@@ -58,10 +58,10 @@ int main() {
     graph.add(6,8); 
     graph.add(7,9);
     graph.add(8,9);
-    graph.add(9,-1);
+    graph.add(9,NULL);
 //    graph.print();
 
     auto r = toposort(graph);
-    for(int i=1; i<10; i++)
-        cout<<(*r)[i]<<endl;
+    for(vector<int>::iterator i=r.begin(); i!=r.end(); i++)
+        cout<<*i<<endl;
 }
