@@ -43,27 +43,39 @@ vector<int> toposort(Graph g){
     return L;
 }
 
-void dijkstra(Graph gr){
+void dijkstra(vector<vector<int>> g){
     /*
      * 寻找单源最短路径（图中不能有负权的边）
      * 复杂度O(N**2)
+     * n:图中的点数
      */
-    int N = gr.graph.size();     // 点数
-    int dis[N], g[N][N];         // dis:全局变量dis[i]表示节点1到i的最短距离，g[i][j]表示i到j之间边的距离
-    bool v[N];
-    for(int i=1; i<=N; ++i) dis[i] = INF;
+    size_t n=g.size();
+    int dis[n];         // dis:全局变量dis[i]表示节点1到i的最短距离，g[i][j]表示i到j之间边的距离
+    bool v[n];
+    for(int i=1; i<=n; ++i) dis[i] = INF;
     dis[1]=0;
     memset(v, 0, sizeof v);
-    for(int i=1; i<=N; ++i){
+    for(int i=1; i<=n; ++i){
         int mark=-1, mindis=INF;
-        for(int j=1; j<=N; ++j)
+        for(int j=1; j<=n; ++j)
             if(!v[j]&&dis[j]<mindis){
                 mindis=dis[j];
                 mark = j;
             }
         v[mark]=1;
-        for(int j=1; j<=N; ++j)
+        for(int j=1; j<=n; ++j)
             if(!v[j])
                 dis[j]=min(dis[j], dis[mark]+g[mark][j]);
     }
+}
+
+void floyd_warshall(vector<vector<int>> g){
+    /*
+     * 复杂度O(N**3)
+     */
+    int N=g.size();
+    for(int k=1; k<=N; ++k)
+        for(int i=1; i<=N; ++i)
+            for(int j=1; j<=N; ++j)
+                g[i][j]=min(g[i][j], g[i][k]+g[k][j]);
 }
