@@ -9,6 +9,7 @@
 #include "graph.h"
 
 using std::vector; using std::queue; using std::map; using std::shared_ptr; using std::make_shared; using std::min;
+using std::max;
 
 
 vector<int> toposort(Graph g){
@@ -78,4 +79,15 @@ void floyd_warshall(vector<vector<int>> g){
         for(int i=1; i<=N; ++i)
             for(int j=1; j<=N; ++j)
                 g[i][j]=min(g[i][j], g[i][k]+g[k][j]);
+}
+
+int dag_path(int N, int x){
+    int g[N][N], f[N], n;
+    bool done[N];
+    if(done[x]) return f[x];
+    for(int i=1; i<=n; ++i)
+        if(g[i][x])
+            f[x]=max(f[x], f[i]+g[i][x]);
+    done[x]=true;
+    return f[x];
 }
