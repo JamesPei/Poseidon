@@ -11,7 +11,7 @@
 #include <map>
 
 class Graph{
-    /*
+    /**
      * 图的表示方法，包括前向星和邻接集两种方式
      */
 public:

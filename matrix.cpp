@@ -64,7 +64,7 @@ Matrix Matrix::operator*(const Matrix &b) {
 }
 
 vector<double> Matrix::gaussian_elimination(){
-    /*
+    /**
      * 高斯消元，用于求解多元一次方程，复杂度O(n**3)
      * return:方程解集
      */
@@ -121,7 +121,7 @@ vector<double> operator - (vector<double> a, vector<double> b){
 }
 
 vector<vector<double>> Matrix::inverse(){
-    /*
+    /**
      * 矩阵转置，复杂度O(n**3)
      * return:转置后的矩阵
      */
