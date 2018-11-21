@@ -37,6 +37,14 @@ vector<int> getPrime(int n){
     return ans;
 }
 
+bool isPrime(int n){
+    /*
+     * is N a prime number?
+     * Time complexity:O(logN)
+     * return: bool
+     */
+
+}
 
 vector<int> prime_factor_Decomposition(int n){
     /*

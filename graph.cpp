@@ -9,10 +9,11 @@
 #include "graph.h"
 
 using std::vector; using std::queue; using std::map; using std::shared_ptr; using std::make_shared; using std::min;
+using std::max;
 
 
 vector<int> toposort(Graph g){
-    /*
+    /**
      * 拓扑排序
      * 复杂度O(|V|+|E|)
      */
@@ -44,7 +45,7 @@ vector<int> toposort(Graph g){
 }
 
 void dijkstra(vector<vector<int>> g){
-    /*
+    /**
      * 寻找单源最短路径（图中不能有负权的边）
      * 复杂度O(N**2)
      * n:图中的点数
@@ -70,7 +71,7 @@ void dijkstra(vector<vector<int>> g){
 }
 
 void floyd_warshall(vector<vector<int>> g){
-    /*
+    /**
      * 复杂度O(N**3)
      */
     int N=g.size();
