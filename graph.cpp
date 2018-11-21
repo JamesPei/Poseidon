@@ -9,6 +9,7 @@
 #include "graph.h"
 
 using std::vector; using std::queue; using std::map; using std::shared_ptr; using std::make_shared; using std::min;
+using std::max;
 
 
 vector<int> toposort(Graph g){

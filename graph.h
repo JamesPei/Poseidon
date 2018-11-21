@@ -126,5 +126,6 @@ private:
 std::vector<int> toposort(Graph g);
 void dijkstra(std::vector<std::vector<int>> g);
 void floyd_warshall();
+int dag_path(int N, int x);
 
 #endif //POSEIDON_GRAPH_H
