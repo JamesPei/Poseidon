@@ -22,15 +22,7 @@ public:
     Graph(int n=0, int m=0): to(n), next(m){
         type = 1;
         info.resize(n);
-        //Resizes the container so that it contains n elements.
-        //If n is smaller than the current container size, the content is reduced to its first n elements, removing those beyond (and destroying them).
-        //If n is greater than the current container size, the content is expanded by inserting at the end as many elements
-        //as needed to reach a size of n. If val is specified, the new elements are initialized as copies of val, otherwise, they are value-initialized.
-        //If n is also greater than the current container capacity, an automatic reallocation of the allocated storage space takes place.
-        //Notice that this function changes the actual content of the container by inserting or erasing elements from it.
         next.reserve(m);
-        //Requests that the vector capacity be at least enough to contain n elements, If n is greater than the current
-        //vector capacity, the function causes the container to reallocate its storage increasing its capacity to n (or greater).
         to.reserve(m);
     }
 
@@ -77,8 +69,6 @@ public:
             for(i=0; i<info.size(); i++)
                 if(info[i]==to.size() - 1){
                     info[i] = next.back();
-                    //Returns a reference to the last element in the vector. Unlike member vector::end, which returns an
-                    //iterator just past this element, this function returns a direct reference
                     break;
                 }
             to.pop_back();
@@ -135,7 +125,7 @@ private:
 
 std::vector<int> toposort(Graph g);
 void dijkstra(std::vector<std::vector<int>> g);
-void floyd_warshall();
-int dag_path(int N, int x);
+void floyd_warshall(std::vector<std::vector<int>> g);
+int dag_path(int x);
 
 #endif //POSEIDON_GRAPH_H
