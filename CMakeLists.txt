@@ -1,6 +1,13 @@
-cmake_minimum_required(VERSION 3.12)
-project(Poseidon)
+cmake_minimum_required(VERSION 3.10)
+project(Poseidon VERSION 0.1.1)
 
-set(CMAKE_CXX_STANDARD 11)
-set(SOURCE_FILES matrix.h matrix.cpp main.cpp sequence.h primenumber.h primenumber.cpp utilities.h graph.h graph.cpp tree.h tree.cpp dag.cpp)
-add_library(Poseidon ${SOURCE_FILES})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
+
+aux_source_directory(src SRC_FILES)
+aux_source_directory(src/utils UTILS_FILES)
+MESSAGE(STATUS ${SRC_FILES})
+add_library(Poseidon SHARED ${SRC_FILES} ${UTILS_FILES})
+target_include_directories(Poseidon PUBLIC include/ include/utils/)
+
